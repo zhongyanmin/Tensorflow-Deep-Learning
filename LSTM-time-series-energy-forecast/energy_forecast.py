@@ -93,7 +93,7 @@ print('input_shape:', sample[0].shape[-2:])
 
 # 构造模型
 model = Sequential()
-model.add(LSTM(units=8, activation='relu', input_shape=sample[0].shape[-2:]))
+model.add(LSTM(units=8, activation='relu', input_shape=sample[0].shape[-2:], return_sequences=True))
 model.add(Dense(units=1))
 
 # 查看模型结构
